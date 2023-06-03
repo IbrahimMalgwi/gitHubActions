@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
+      # Runs a list of commands using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
@@ -44,3 +44,19 @@ jobs:
           mvn --version
           grable --version
           ant -version
+          echo
+          echo where is the android SDK root?
+          echo $ANDROID_SDK_ROOT
+          echo
+          echo where is the Selenium jars?
+          echo $SELENIUM_JAR_PATH
+          echo
+          echo what is the workspace location?
+          echo $RUNNER_WORKSPACE
+          echo
+          echo who is runnning te script?
+          whoami
+          echo how is the disk layout?
+          df
+          echo what environment variables are available?
+          env
